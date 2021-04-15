@@ -1,0 +1,1 @@
+npx servor dist index.html 8080 --reload

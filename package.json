@@ -1,0 +1,25 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Webpack training",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perezcr/webpack.git"
+  },
+  "keywords": [],
+  "author": "perezcr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perezcr/webpack/issues"
+  },
+  "homepage": "https://github.com/perezcr/webpack#readme",
+  "devDependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
