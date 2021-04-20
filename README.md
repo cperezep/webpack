@@ -38,6 +38,12 @@ module.exports = {
 };
 ```
 
+#### CSS-Loaders
+
+- css-loader: The css-loader interprets @import and url() like import/require() and will resolve them returning CSS code.
+- style-loader: Inject CSS into the DOM with <style> tag.
+
+
 ### Plugins
 While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.
 In order to use a plugin, you need to require() it and add it to the plugins array. Most plugins are customizable through options. Since you can use a plugin multiple times in a configuration for different purposes, you need to create an instance of it by calling it with the new operator.
