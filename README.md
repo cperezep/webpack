@@ -116,3 +116,24 @@ We've assembled a few presets for common environments:
 
 ### Add-Ons
 - [awesome-webpack](https://github.com/webpack-contrib/awesome-webpack)
+- [Guide webpack 5](https://www.valentinog.com/blog/webpack/)
+
+### webpack-merge
+webpack-merge provides a merge function that concatenates arrays and merges objects creating a new object. If functions are encountered, it will execute them, run the results through the algorithm, and then wrap the returned values within a function again.
+```javascript
+const { merge } = require('webpack-merge');
+
+// Default API
+const output = merge(object1, object2, object3, ...);
+
+// Keys matching to the right take precedence:
+const output = merge(
+  { fruit: "apple", color: "red" },
+  { fruit: "strawberries" }
+);
+console.log(output); // { color: "red", fruit: "strawberries"}
+```
+
+### [webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server)
+The webpack-dev-server provides you with a simple web server and the ability to use live reloading.
+
