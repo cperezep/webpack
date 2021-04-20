@@ -42,6 +42,7 @@ module.exports = {
 
 - css-loader: The css-loader interprets @import and url() like import/require() and will resolve them returning CSS code.
 - style-loader: Inject CSS into the DOM with <style> tag.
+- sass-loader: Loads a Sass/SCSS file and compiles it to CSS.
 
 
 ### Plugins

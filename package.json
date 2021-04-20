@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/perezcr/webpack#readme",
   "devDependencies": {
+    "bootstrap": "^4.6.0",
     "css-loader": "^5.2.4",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0"
