@@ -21,6 +21,7 @@
   "homepage": "https://github.com/perezcr/webpack#readme",
   "devDependencies": {
     "bootstrap": "^4.6.0",
+    "clean-webpack-plugin": "*",
     "css-loader": "^5.2.4",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",

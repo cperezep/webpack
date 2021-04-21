@@ -83,8 +83,11 @@ tip
 };
 ```
 
-#### Example: HtmlWebpackPlugin
+#### HtmlWebpackPlugin
 This is a webpack plugin that simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. You can either let the plugin generate an HTML file for you, supply your own template using lodash templates or use your own loader.
+
+#### CleanWebpackPlugin
+This plugin will remove all files inside webpack's output.path directory, as well as all unused webpack assets after every successful rebuild.
 
 ### Mode
 By setting the mode parameter to either development, production or none, you can enable webpack's built-in optimizations that correspond to each environment. The default value is production.
