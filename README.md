@@ -44,6 +44,27 @@ module.exports = {
 - style-loader: Inject CSS into the DOM with <style> tag.
 - sass-loader: Loads a Sass/SCSS file and compiles it to CSS.
 
+#### HTML-Loader
+- html-loader: Exports HTML as string. HTML is minimized when the compiler demands.
+- Asset Modules: Asset Modules is a type of module that allows one to use asset files (fonts, icons, etc) without configuring additional loaders.
+```javascript
+...
+output: {
+  filename: "main.[contenthash].js",
+  path: path.resolve(__dirname, "dist"),
+  // Custom output filename for assets
+  assetModuleFilename: "assets/[hash][ext][query]",
+},
+module: {
+  rules: [
+    {
+      test: /\.png/,
+      type: 'asset/resource'
+    }
+  ]
+},
+...
+```
 
 ### Plugins
 While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables.

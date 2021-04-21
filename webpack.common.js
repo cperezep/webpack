@@ -11,7 +11,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        // i -> case insensitive match
+        test: /\.scss$/i,
         use: [
           // Order matters
           // 3. Creates `style` nodes from JS strings and inject into DOM
@@ -21,6 +22,15 @@ module.exports = {
           // 1. Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      // Added html-loader to automatically require the files we reference in img tags
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
+        test: /\.(svg|png|jpg)$/i,
+        type: "asset/resource",
       },
     ],
   },
