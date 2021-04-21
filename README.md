@@ -161,3 +161,12 @@ console.log(output); // { color: "red", fruit: "strawberries"}
 ### [webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server)
 The webpack-dev-server provides you with a simple web server and the ability to use live reloading.
 
+### Separate App and Vendor Entries
+We are telling webpack that we would like 2 separate entry points, our code and 3rd party libraries. With this you can import required libraries or files that aren't modified (e.g. Bootstrap, jQuery, images, etc) inside vendor.js and they will be bundled together into their own chunk. Content hash remains the same, which allows the browser to cache them separately thereby reducing load time.
+```javascript
+entry: {
+  main: './src/index.js',
+  vendor: './src/vendor.js',
+},
+```
+
