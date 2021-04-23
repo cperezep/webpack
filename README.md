@@ -13,6 +13,16 @@ The 2 main things Webpack does:
 - It bundles our code/assets together
 - It manages dependencies
 
+### `npm run build`
+
+Builds the app for production to the `dist` folder.<br>
+It bundles the app in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+
+### `npm run dev`
+It loads the app in development mode using **webpack-dev-server** which provides a simple web server and the ability to use live reloading.
+
 ## Concepts
 
 ### Entry
