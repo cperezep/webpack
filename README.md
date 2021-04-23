@@ -170,3 +170,12 @@ entry: {
 },
 ```
 
+### Extracting CSS into its own file
+Right now everything is being loaded through JS, is a giant string in our main.js bundle which then is injected into the DOM. So this works, there's no problem with it as far as functionality, but in production it's nice to have a separate CSS file rather than waiting for javascript inject the styles and the main reason to do that is performance.
+
+#### [mini-css-extract-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin)
+This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps.
+
+#### [css-minimizer-plugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin)
+This plugin uses [cssnano](https://cssnano.co) to optimize and minify your CSS.
+
