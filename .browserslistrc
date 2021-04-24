@@ -1,0 +1,7 @@
+# Browsers that we support
+# Los navegadores principales en su versión actual hasta 2 versiones hacia atrás
+last 2 versions
+# Navegadores utilizados más de un 0.5% a nivel mundial
+> 1%
+# Navegador de escritorio en versiones como la indicada o superior
+IE 10

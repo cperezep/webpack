@@ -1,0 +1,12 @@
+// When we @use a file, Sass automatically generates a namespace based on the file name
+@use 'variables';
+
+body {
+  margin: 0;
+  background-color: variables.$bg;
+  color: var(--text);
+}
+
+.logo {
+  width: 200px;
+}

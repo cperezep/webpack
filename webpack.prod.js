@@ -23,10 +23,12 @@ module.exports = merge(common, {
       {
         test: /\.scss$/i, // i -> case insensitive match
         use: [
-          // 3. Extract css into files
+          // 4. Extract css into files
           MiniCssExtractPlugin.loader,
-          // 2. Translates CSS into CommonJS
+          // 3. Translates CSS into CommonJS
           "css-loader",
+          // 2. Loader to process CSS with PostCSS
+          "postcss-loader",
           // 1. Compiles Sass to CSS
           "sass-loader",
         ],

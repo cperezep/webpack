@@ -6,6 +6,7 @@ module.exports = merge(common, {
   mode: "development",
   devServer: {
     contentBase: "./dist",
+    hot: true,
   },
   output: {
     filename: "[name].bundle.js",
@@ -15,13 +16,15 @@ module.exports = merge(common, {
     rules: [
       {
         // i -> case insensitive match
-        test: /\.scss$/i,
+        test: /\.s(c|a)ss$/i,
         use: [
           // Order matters
-          // 3. Creates `style` nodes from JS strings and inject into DOM
+          // 4. Creates `style` nodes from JS strings and inject into DOM
           "style-loader",
-          // 2. Translates CSS into CommonJS
+          // 3. Translates CSS into CommonJS
           "css-loader",
+          // 2. Loader to process CSS with PostCSS
+          "postcss-loader",
           // 1. Compiles Sass to CSS
           "sass-loader",
         ],
