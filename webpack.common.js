@@ -22,7 +22,10 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(svg|png|jpg)$/i,
+        test: /\.(svg|png|jpe?g|gif)$/i,
+        // asset/resource: emits a separate file and exports the URL
+        // asset/inline: exports a data URI of the asset (base64)
+        // asset: automatically chooses between exporting a data URI and emitting a separate file.
         type: "asset/resource",
       },
       {

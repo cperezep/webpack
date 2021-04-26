@@ -1,5 +1,5 @@
 import Recipes from "./Recipes";
-
+import sword from "../assets/sword.png";
 import "../styles/index.scss";
 
 const App = () => {
@@ -9,6 +9,7 @@ const App = () => {
       <main>
         <section>
           <h1>Oh Herro, React.</h1>
+          <img src={sword} alt="Sword" />
           <Recipes />
         </section>
       </main>
