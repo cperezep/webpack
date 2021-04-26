@@ -4,6 +4,7 @@ const { merge } = require("webpack-merge");
 
 module.exports = merge(common, {
   mode: "development",
+  // Required if using webpack-dev-server
   devServer: {
     contentBase: "./dist",
     hot: true,

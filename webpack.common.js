@@ -25,6 +25,19 @@ module.exports = {
         test: /\.(svg|png|jpg)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.jsx?$/, // x? -> optional
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
     ],
+  },
+  resolve: {
+    // Attempt to resolve these extensions in order. If multiple files share the same name but have different extensions, webpack will resolve the one with the extension listed first in the array and skip the rest.
+    // which is what enables users to leave off the extension when importing:
+    // import File from '../path/component';
+    extensions: [".js", ".jsx", "..."],
   },
 };
