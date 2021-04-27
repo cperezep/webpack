@@ -4,7 +4,7 @@
   "description": "Webpack training",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack serve --config webpack.dev.js --open",
+    "start": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
   },
   "private": true,
@@ -27,6 +27,7 @@
     "babel-loader": "^8.2.2",
     "bootstrap": "^4.6.0",
     "clean-webpack-plugin": "*",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
     "html-loader": "^2.1.2",
