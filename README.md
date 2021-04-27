@@ -13,15 +13,14 @@ The 2 main things Webpack does:
 - It bundles our code/assets together
 - It manages dependencies
 
-### `npm run build`
+### `npm start`
+It loads the app in development mode using **webpack-dev-server** which provides a simple web server and the ability to use hot reloading.
 
+### `npm run build`
 Builds the app for production to the `dist` folder.<br>
 It bundles the app in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-
-### `npm run dev`
-It loads the app in development mode using **webpack-dev-server** which provides a simple web server and the ability to use live reloading.
 
 ## Concepts
 
@@ -189,4 +188,7 @@ This plugin extracts CSS into separate files. It creates a CSS file per JS file 
 
 #### [css-minimizer-plugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin)
 This plugin uses [cssnano](https://cssnano.co) to optimize and minify your CSS.
+
+#### [react-refresh-webpack-plugin](https://github.com/pmmmwh/react-refresh-webpack-plugin)
+Webpack plugin to enable "Fast Refresh" (also previously known as Hot Reloading) for React components.
 

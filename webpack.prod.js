@@ -9,7 +9,9 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     filename: "[name].[contenthash].bundle.js",
+    // Output path is required for `clean-webpack-plugin`
     path: path.resolve(__dirname, "dist"),
+    // This places all images processed in an assets folder
     assetModuleFilename: "assets/[hash][ext][query]",
   },
   plugins: [

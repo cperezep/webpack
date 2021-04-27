@@ -1,6 +1,7 @@
 const path = require("path");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
@@ -13,6 +14,7 @@ module.exports = merge(common, {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
+  plugins: [new ReactRefreshWebpackPlugin()],
   module: {
     rules: [
       {
@@ -31,5 +33,14 @@ module.exports = merge(common, {
         ],
       },
     ],
+  },
+  // Instructs webpack to target a specific environment.
+  // Defaults to 'browserslist' or to 'web' when no browserslist configuration was found.
+  // 'web' is required to enable live reloading
+  target: "web",
+  // Enable fast-refresh
+  // https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/88#issuecomment-627558799
+  optimization: {
+    runtimeChunk: "single",
   },
 });

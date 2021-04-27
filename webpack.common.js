@@ -25,13 +25,14 @@ module.exports = {
         test: /\.(svg|png|jpe?g|gif)$/i,
         // asset/resource: emits a separate file and exports the URL
         // asset/inline: exports a data URI of the asset (base64)
-        // asset: automatically chooses between exporting a data URI and emitting a separate file.
+        // asset: automatically chooses between exporting a data URI and emitting a separate file, pick between outputing images to a file, or inlining them in the bundle as base64 with a default max inline size of 8kb
         type: "asset/resource",
       },
       {
         test: /\.jsx?$/, // x? -> optional
         exclude: /node_modules/,
         use: {
+          // without additional settings, this will reference .babelrc
           loader: "babel-loader",
         },
       },
