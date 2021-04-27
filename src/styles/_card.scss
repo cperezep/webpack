@@ -1,0 +1,69 @@
+@use 'variables';
+
+.card {
+  display: flex;
+  flex: 0 0 50%;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+  margin-bottom: 1rem;
+
+  &--selected {
+    border: 3px solid variables.$secondary;
+  }
+
+  &__box-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 40%;
+    border-right: 1px solid variables.$bg;
+
+    h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: variables.$primary;
+    }
+  }
+
+  &__image {
+    max-height: 200px;
+  }
+
+  &__drops {
+    padding: 0 1rem;
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      border-bottom: 2px solid variables.$primary;
+      font-size: 1.2rem;
+      padding: 0 0 0.3rem 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__list-item {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+
+    &--left {
+      flex: 0 0 70%;
+      text-align: left;
+    }
+    &--right {
+      flex: 0 0 30%;
+      text-align: right;
+    }
+  }
+}

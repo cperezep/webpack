@@ -2,18 +2,25 @@
 @use 'variables';
 
 body {
+  font-family: "Poppins", sans-serif;
   background-color: variables.$bg;
   color: var(--text);
   margin: 0;
-  padding: 1rem 2rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 }
 
-.logo {
-  width: 200px;
+section {
+  width: 100%;
+}
+
+.date {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
 }

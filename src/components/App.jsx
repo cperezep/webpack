@@ -1,17 +1,16 @@
-import Recipes from "./Recipes";
-import sword from "../assets/sword.png";
+import MonsterList from "./MonsterList";
 import "../styles/index.scss";
+import webpack from "../assets/webpack.svg";
 
 const App = () => {
   return (
     <>
-      <section className="hero"></section>
+      <section className="banner"></section>
       <main>
         <section>
-          <h1>Oh Herro, React.</h1>
-          <img src={sword} alt="Sword" />
-          <Recipes />
+          <MonsterList />
         </section>
+        <img src={webpack} alt="Webpack" />
       </main>
     </>
   );

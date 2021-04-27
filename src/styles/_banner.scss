@@ -1,0 +1,10 @@
+@use 'variables';
+
+.banner {
+  background-image: url("../assets/banner.png");
+  background-size: cover;
+  background-color: variables.$primary;
+  background-position: center;
+  min-height: 350px;
+  width: 100%;
+}
